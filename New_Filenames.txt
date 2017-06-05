@@ -1,0 +1,151 @@
+l1 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_0K0M_09h56m38s-10Sep2015.txt 
+l2 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_2K29M_11h00m48s-10Sep2015.txt 
+l3 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_3K161M_11h34m32s-10Sep2015.txt 
+l4 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_3K873M_12h36m54s-10Sep2015.txt 
+l5 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_4K268M_12h59m38s-10Sep2015.txt 
+l1 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/270715 Summit to Hebron/cloggy down fast_Down Fast_Setup_1K558M_15h18m54s-27Jul2015.txt 
+l8 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/210115 Clogwyn to Hebron/Rocky valley down_Down Slow_Setup_-2K-156M_14h25m49s-21Jul2015.txt 
+l9 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/210115 Clogwyn to Hebron/Rocky valley down_Down Slow_Setup_0K0M_12h16m04s-21Jul2015.txt 
+l8 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/210115 Clogwyn to Hebron/Rocky valley down_Down Slow_Setup_0K0M_11h12m42s-21Jul2015.txt 
+l9 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/170715 Halfway to Hebron/Halfway Bottom points trail from 6 fishplate_Down Slow_Points lnspection_1K961M_14h28m46s-17Jul2015.txt 
+l7 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/210115 Clogwyn to Hebron/Rocky valley down_Down Slow_Setup_0K0M_12h16m04s-21Jul2015.txt 
+l8 C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/170715 Halfway to Hebron/Halfway Bottom points trail from 6 fishplate_Down Slow_Points lnspection_1K961M_14h28m46s-17Jul2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/270715 Summit to Hebron/cloggy down fast_Down Fast_Setup_0K0M_14h58m40s-27Jul2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/270715 Summit to Hebron/summit to clog_Down Slow_Setup_0K0M_12h39m36s-27Jul2015.txt 
+l9 Line2D(_line9) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/030915 Halfway to Hebron/Halfway to hebron_Down Slow_Routine Maintenance_0K0M_11h24m02s-03Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/270715 Summit to Hebron/cloggy down fast_Down Fast_Setup_1K558M_15h18m54s-27Jul2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-28 Summit to Waterfall/01 Sumit loop_Down Slow_Points lnspection_0K0M_11h09m38s-28Sep2015.txt 
+l9 Line2D(_line9) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-28 Summit to Waterfall/01 Sumit loop_Down Slow_Points lnspection_0K381M_11h25m40s-28Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/AppData/Local/Microsoft/Windows/INetCache/IE/BFVBFJMO/01_Sumit_loop_Down_Slow_Points_lnspection_0K381M_11h25m40s-28Sep2015[1].txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-28 Summit to Waterfall/01 Sumit loop_Down Slow_Points lnspection_0K381M_11h25m40s-28Sep2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Geismar_Data_Transfer/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l7 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l9 Line2D(_line9) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Data/2015-10-16 measuring girders/Up_Down Slow_110_1K611M_01h28m12s-15Oct2015.txt 
+l9 Line2D(_line9) C:/Users/Technical2/Documents/Python/Data/2015-10-16 measuring girders/Up_Up Slow_110_0K986M_01h02m07s-15Oct2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l9 Line2D(_line9) C:/Users/Technical2/Documents/Python/Data/2015-09-28 Summit to Waterfall/01 Sumit loop_Down Slow_Points lnspection_0K381M_11h25m40s-28Sep2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Data/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_4K268M_12h59m38s-10Sep2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Data/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_4K268M_12h59m38s-10Sep2015.txt 
+l9 Line2D(_line9) C:/Users/Technical2/Documents/Python/Data/2015-09-03 Halfway to Hebron/Halfway towards hebron_Down Slow_Routine Maintenance_0K0M_10h37m53s-03Sep2015.txt 
+l8 Line2D(_line8) C:/Users/Technical2/Documents/Python/Data/2015-09-28 Summit to Waterfall/01 Sumit loop_Down Slow_Points lnspection_0K0M_11h09m38s-28Sep2015.txt 
+l8 Line2D(_line1) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l9 Line2D(_line2) C:/Users/Technical2/Documents/Python/Data/2015-09-03 Halfway to Hebron/Halfway to hebron_Down Slow_Routine Maintenance_0K0M_11h24m02s-03Sep2015.txt 
+l8 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_3K873M_12h36m54s-10Sep2015.txt 
+l8 Line2D(_line1) C:/Users/Technical2/Documents/Python/Data/2015-09-10 Welsh Walk/W_Down Slow_6 Month Inspection_3K161M_11h34m32s-10Sep2015.txt 
+l8 Line2D(_line1) C:/Users/Technical2/Documents/Python/Data/2015-09-28 Summit to Waterfall/01 Sumit loop_Down Slow_Points lnspection_0K0M_11h09m38s-28Sep2015.txt 
+l10 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) E:/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) E:/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) E:/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) E:/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) E:/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) C:/Users/bruno.zurbuchen/Desktop/Python_Folder/Data/cloggy down fast_Down Fast_Setup_0K0M_14h58m40s-27Jul2015.txt 
+l14 Line2D(_line8) C:/Users/bruno.zurbuchen/Desktop/Python_Folder/Data/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) C:/Users/bruno.zurbuchen/Desktop/Python_Folder/Data/W_Down Fast_Setup_0K56M_00h32m22s-11Nov2015.txt 
+l13 Line2D(_line7) C:/Users/bruno.zurbuchen/Desktop/Python_Folder/Data/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) C:/Users/bruno.zurbuchen/Desktop/Python_Folder/Data/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l13 Line2D(_line7) E:/Python/Data/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l15 Line2D(_line7) E:/Python/Data/2015-12-11 Station/W_Down Fast_Setup_7K725M_02h17m07s-10Dec2015.txt 
+l15 Line2D(_line7) E:/Python/Data/2015-12-11 Station/W_Down Fast_Setup_7K725M_02h17m07s-10Dec2015.txt 
+l15 Line2D(_line7) E:/Python/Data/2015-12-11 Station/W_Down Fast_Setup_7K725M_02h17m07s-10Dec2015.txt 
+l15 Line2D(_line7) E:/Python/Data/2015-12-11 Station/W_Down Fast_Setup_7K725M_02h17m07s-10Dec2015.txt 
+l15 Line2D(_line7) E:/Python/Data/2015-12-11 Station/05 Clogwyn Straight_Down Fast_6 Month Inspection_0K0M_03h44m32s-10Dec2015.txt 
+l15 Line2D(_line7) G:/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l15 Line2D(_line7) G:/Python/Data/2015-09-30 summit to llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-02-16 test if bluetooth worked/2 mile curve post washout_Down Slow_Accident Investigation_0K0M_02h16m36s-24Feb2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-03-03 Line opening clogwyn to Llanberis/05 Clogwyn Straight_Down Fast_12 Month Inspection_0K0M_13h43m43s-03Mar2016.txt 
+l15 Line2D(_line7) C:/Users/Technical2/AppData/Local/Microsoft/Windows/INetCache/IE/L5BP512H/02_Summit_Straight_Down_Slow_12_Month_Inspection_0K0M_11h06m32s-09May2016[1].txt 
+l15 Line2D(_line7) C:/Users/Technical2/AppData/Local/Microsoft/Windows/INetCache/IE/L5BP512H/02_Summit_Straight_Down_Slow_12_Month_Inspection_0K0M_11h06m32s-09May2016[2].txt 
+l15 Line2D(_line7) C:/Users/Technical2/AppData/Local/Microsoft/Windows/INetCache/IE/L5BP512H/02_Summit_Straight_Down_Slow_12_Month_Inspection_0K0M_11h06m32s-09May2016[1].txt 
+l15 Line2D(_line7) G:/Python/Data/2016-05-09 Line opening Summit to Llanberis/02_Summit_Straight_Down_Slow_12_Month_Inspection_0K0M_11h06m32s-09May2016.txt 
+l15 Line2D(_line7) G:/Python/Data/SMR_Master_twistedd.txt 
+l15 Line2D(_line7) G:/Python/Data/BRB_Whole_0K0M-11Nov2015.txt 
+l16 Line2D(_line8) G:/Python/Data/2015-09-30 End of Season Summit to Llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l15 Line2D(_line7) G:/Python/Data/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-06-21 Alfie walkabout summit to Hebron/02 Summit Straight_Down Fast_6 Month Inspection_0K0M_13h06m45s-21Jun2016 _summit_to_5_and_half_km.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-06-21 Alfie walkabout summit to Hebron/02 Summit Straight_Down Fast_6 Month Inspection_0K0M_13h06m45s-21Jun2016 _summit_to_5_and_half_km.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-06-21 Alfie walkabout summit to Hebron/02 Summit Straight_Down Fast_6 Month Inspection_0K0M_13h06m45s-21Jun2016 _summit_to_5_and_half_km.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-06-21 Alfie walkabout summit to Hebron/02 Summit Straight_Down Fast_6 Month Inspection_0K0M_13h06m45s-21Jun2016 _summit_to_5_and_half_km.txt 
+l15 Line2D(_line7) G:/Python/Data/2015-09-30 End of Season Summit to Llanberis/02 Summit Straight_Down Slow_12 Month Inspection_0K0M_12h33m48s-30Sep2015.txt 
+l15 Line2D(_line7) G:/Python/Data/2016-06-21 Alfie walkabout summit to Hebron/02 Summit Straight_Down Fast_6 Month Inspection_0K0M_13h06m45s-21Jun2016 _summit_to_5_and_half_km.txt 
+l15 Line2D(_line7) G:/Python/Data/SMR_Master.txt 
+l15 Line2D(_line7) G:/Python/Data/SMR_Master.txt 
+l15 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/SMR_Master.txt 
+l15 Line2D(_line7) C:/Users/Technical2/Documents/Python/Data/SMR_Master.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/SMR_Master.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Routine Maintenance_waterfall halt _Down Slow_102203-270217/Routine Maintenance_waterfall halt _Down Slow_102203-270217.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Routine Maintenance_waterfall halt _Down Slow_102203-270217/Routine Maintenance_waterfall halt _Down Slow_102203-270217.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Routine Maintenance_waterfall halt _Down Slow_102203-270217/Routine Maintenance_waterfall halt _Down Slow_102203-270217.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Routine Maintenance_waterfall halt _Down Slow_102203-270217/Routine Maintenance_waterfall halt _Down Slow_102203-270217.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Routine Maintenance_waterfall halt _Down Slow_102203-270217/Routine Maintenance_waterfall halt _Down Slow_102203-270217.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/2017-03-13 Track Opening Clogwyn to Llanberis/test.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/2017-03-13 Track Opening Clogwyn to Llanberis/test.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/2017-03-13 Track Opening Clogwyn to Llanberis/test.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_120249-251016/Monthly_Summit straight to Ll_Walking Down_120249-251016.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_120249-251016/Monthly_Summit straight to Ll_Walking Down_120249-251016.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/2017-03-13 Track Opening Clogwyn to Llanberis/test.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/2017-03-13 Track Opening Clogwyn to Llanberis/test.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/2017-03-13 Track Opening Clogwyn to Llanberis/test.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/TEST_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/TEST_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/TEST_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/TEST_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/TEST_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/TEST_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/EXCEL_NOTEPAD_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/EXCEL_NOTEPAD_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l16 Line2D(_line8) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
+l17 Line2D(_line9) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/EXCEL_NOTEPAD_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l16 Line2D(_line8) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l16 Line2D(_line8) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
+l17 Line2D(_line9) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/EXCEL_NOTEPAD_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l18 Line2D(_line10) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
+l16 Line2D(_line8) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l17 Line2D(_line9) C:/Users/technical2.SNOWDON/Documents/Python/Data/Monthly_Summit straight to Ll_Walking Down_113854-250517/EXCEL_NOTEPAD_Monthly_Summit straight to Ll_Walking Down_113854-250517.txt 
+l18 Line2D(_line10) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
+l16 Line2D(_line8) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+l16 Line2D(_line8) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
