@@ -10,8 +10,7 @@ Track_Marker_Start_Meters = 3000
 # Filepath:     Run via My Documents/Python/Spyder
 # Description:  Plot a Digital Map
 
-#Python_Folder = "G://Python"
-Python_Folder =  "C:/Users/technical2.SNOWDON/Documents/Python"
+Python_Folder =  "C:/Users/technical2.SNOWDON/Documents/Python" #reference here? create folders within github?
 
 ## Defined Variables Here:          
 xtol_orange_mm =            20      # Xlevel Tolerance Band Orange, mm
