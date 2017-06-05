@@ -1,0 +1,471 @@
+# -*- coding: utf-8 -*-
+from __future__ import division
+from __future__ import print_function
+
+Track_Marker_Start_Meters = 3000
+# 7225 for 020 #7135 for 025 #2024 for clogwyn? #3817 #7225
+
+# Date:         May 2017
+# Author:       PhilJennings9@gmail.com
+# Filepath:     Run via My Documents/Python/Spyder
+# Description:  Plot a Digital Map
+
+#Python_Folder = "G://Python"
+Python_Folder =  "C:/Users/technical2.SNOWDON/Documents/Python"
+
+## Defined Variables Here:          
+xtol_orange_mm =            20      # Xlevel Tolerance Band Orange, mm
+xtol_red_mm =               30      # Xlevel Tolerance Band Red, mm
+twist_Base_Metres =         3       # Twist Base, m
+twist_tol =                 20      # Twist Tolerance Band Blue, mm
+moving_Average_Metres =     90      # Moving Average, m
+Gtol_mid_mm =               802.5   # Gauge Tolerance Midpoint, mm
+Gtol_orange_mm =            7.5     # Gauge Tolerance Band Orange, mm
+Gtol_red_mm =               12.5    # Gauge Tolerance Band Red, mm 
+
+
+## logic checks for Variables
+twist_Base_Metres = int(abs(twist_Base_Metres))
+xtol_orange_mm = abs(xtol_orange_mm)
+xtol_red_mm = abs(xtol_red_mm)
+if xtol_orange_mm > xtol_red_mm:
+    raise SystemExit()
+    
+    
+
+
+## Define Python Plotting ParaMetres Here:
+import matplotlib
+matplotlib.use('TkAgg')
+from matplotlib import style
+style.use('ggplot')
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Button, CheckButtons
+## Import numpy for simple arrays
+import numpy as np
+## Import Python Data Analsis Library
+import pandas as pd 
+#import html5lib?
+## Start script counter
+import copy
+import time
+start_time = time.time()
+## Use Tkinter to make GUIs
+import sys
+import os
+matplotlib.rcParams["savefig.directory"] = os.chdir(os.path.dirname('%s/Data'%Python_Folder))
+#import getpass
+if sys.version[0] == '2':
+    import Tkinter as tk
+    #import tkFileDialog as tkFD
+    import tkFileDialog as tkFD
+else:
+    import tkinter as tk
+    from tkinter import filedialog as tkFD
+## Close old plots
+plt.close('all')
+
+def format_coord(x, y):
+    return '{0:<100} At  {1:^8.0f} m from the summit,    X-Level =  {2:^6.0f} mm {3:100}'.format("",x,y,"")
+    
+# Previous plots:
+# October 2016 close of track    
+#smallfilename = '%s/Data/Monthly_Summit straight to Ll_Walking Down_092245-251016/Monthly_Summit straight to Ll_Walking Down_092245-251016.txt'%Python_Folder #change header to 48?
+
+filename = '%s/Data/2017-03-13 Track Opening Clogwyn to Llanberis/test.txt'%Python_Folder #change header to 48?
+
+raw = pd.read_csv(filename, sep = '\t', header = 48, 
+                  usecols = ["KM", "Metres", "Gauge", "X-Level"],dtype = np.float64)
+raw.rename(columns = {'KM': 'Kilometres', 'Metres': 'Metres', 'Gauge': 'Gauge', 'X-Level': 'XLevel'}, inplace = True)
+raw.Metres = raw.Metres + raw.Kilometres * 1000 - 10
+raw.Metres[:]=raw.Metres[:]+1934 #for clogwyn start
+raw.drop(['Kilometres'], axis = 1, inplace=True)
+Master_Metres = raw.Metres.values
+Master_XLevel = raw.XLevel.values+2
+Master_Gauge  = raw.Gauge.values    
+    
+
+MakeMasterSubplot = True; 
+if MakeMasterSubplot == True:
+    
+    ## Figure and axis handles.    
+    fig, ax0 = plt.subplots(figsize = (15, 8), dpi = 80)
+    # initialise figsize to laptop size 12 x 7 inches
+    plt.subplots_adjust(top=0.85, left=0.06, right=0.83, bottom=0.1)
+    lw = 0.5 #for current trace
+    lw_thin = 0.2 #for previous traces
+    l0,   = plt.plot([0],[0], color='black', lw=0.6, ls=':')# Xlevel_Sept_2015 
+    l00,  = plt.plot([0],[0], color='black', lw=lw_thin)   # unused at the moment
+    ax4 = ax0.twinx()                                      # ax4 
+    l1in, = plt.plot([0],[0], color="black", lw=lw_thin)   # Gradients
+    ax5 = ax0.twinx()                                      # ax5
+    l1C,  = plt.plot([0],[0], color="black", lw=lw_thin)   # Curves
+    ax6 = ax0.twinx()                                      # ax6
+    l1B,  = plt.plot([0],[0], color="black", lw=lw_thin)   # Ballast
+    ax7 = ax0.twinx()                                      # ax7
+    l1S,  = plt.plot([0],[0], color="black", lw=lw_thin)   # Sleeper
+    ax8 = ax0.twinx()                                      # ax8
+    l1R,  = plt.plot([0],[0], color='black', lw=lw_thin)   # Rail
+    plt.sca(ax0)
+    fig.sca(ax0)
+    l1Xa, = plt.plot([0],[0], color='green', lw=lw)        # xlevel green
+    l1Xb, = plt.plot([0],[0], color='orange',lw=lw)        # xlevel orange
+    l1Xc, = plt.plot([0],[0], color='red',   lw=lw)        # xlevel red
+    l1M,  = plt.plot([0],[0], color='black', lw=lw)        # Moving Average
+    l1T,  = plt.plot([0],[0], color='blue',  lw=3.5)       # twist
+    ax3 = ax0.twinx()                                      # ax3
+    l1Ga,  = plt.plot([0],[0], color='green', lw=lw_thin)  # gauge green
+    l1Gb,  = plt.plot([0],[0], color='orange',lw=lw_thin)  # gauge orange
+    l1Gc,  = plt.plot([0],[0], color='red',   lw=lw_thin)  # gauge red 
+    plt.sca(ax0)
+    l2,  = plt.plot([0],[0], 'black', lw=0.8)             # 'Add' Xlevel 
+    l3,  = plt.plot([0],[0], 'black', lw=lw)
+    l4,  = plt.plot([0],[0], 'black', lw=lw)
+    l5,  = plt.plot([0],[0], 'black', lw=lw)
+    littleplots = [l0,l00,l1in,l1C,l1B,l1S,l1R,l1Xa,l1Xb,l1Xc,l1M,l1T,l1Ga,l1Gb,l1Gc,l2,l3,l4,l5]
+    # background ax0 to initialise. ax is drawn last to give a visible cursor
+    ax0.tick_params(which = 'both', axis='both', labelbottom = 'off',color = 'black')
+    ax0.set_xticks([0])
+    ax0.set_xticklabels([0])
+    ax0.set_xlim(0,7500)        
+
+    class Index:
+        
+        'common index class for all buttons, this appears in the text doc associated with this class'
+        
+        ind = littleplots.index(l2)
+        is_alive = True #This is a member variable, all members of this class have access to it!
+        
+        def __init__(self, add_filename): #here we setup default parametres #this is the only time add_filename needs to be passed to a def within this class! 
+            self.add_filename = add_filename # you got this instance variable ready for later , if no self,. then it is a local variable
+            pass #print("this bit runs as soon a function is defined (F5), with filenamevariable: %s"% self.add_filename)     
+
+        def add(self, event):
+            tk.Tk().withdraw()
+            self.filename_changed = copy.copy(self.add_filename) # incase the user cancels the dialog box
+            self.add_filename = tkFD.askopenfilename(initialdir = '%s/Data'%Python_Folder)#,filetypes = [('Text files','*.txt')])
+            if self.filename_changed != self.add_filename:
+                print(self.add_filename)
+                self.raw2 = pd.read_csv(self.add_filename, sep = '\t', header = 48, #when copy via excel to notepad
+                               usecols = ["KM", "Metres", "Gauge", "X-Level"],
+                               dtype = np.float64, error_bad_lines = True) #15ms including make it an array!
+                self.raw2.rename(columns = {'KM': 'Kilometres', 'Metres': 'Metres', 'Gauge': 'Gauge', 'X-Level': 'XLevel'}, inplace = True)
+                self.raw2.Metres = self.raw2.Metres.values + self.raw2.Kilometres.values * 1000 #np.sin(2*np.pi*freqs[i]*t)
+                self.raw2.drop(['Kilometres'], axis=1, inplace = True)
+                
+                
+                with open('%s/Data/New_filenames.txt'%Python_Folder,'a') as new_file: # 'a' for append, without truncating filename C:/Users/%s/Documents/Python/Data/new_filenames.txt'%getpass.getuser()
+                    new_file.write("littleplots.l%s %s %s \n" % (self.ind, littleplots[Index.ind], self.add_filename)) # a for appending, w for erase and write
+                # example for 2 traces:
+                # l15 Line2D(_line7) C:/Users/technical2.SNOWDON/Documents/Python/Data/Maintenance_Hebron to Llanberis_Straights_102822-310517/Maintenance_Hebron to Llanberis_Straights_102822-310517.txt 
+                # l16 Line2D(_line8) C:/Users/technical2.SNOWDON/Documents/Python/Data/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517/track opening_SMR_walking down slowly, increasing meters, from 0 at the summit_113308-250517.txt 
+
+                
+                #self.raw2.Metres = self.raw2.Metres - 9 # this is for start position of clogwyn line opening March 2016! 
+                #print (self.raw2[self.raw2['Metres'] == 4800])
+                # Adjustments for line close?
+                #self.raw2.Metres[:22567]=self.raw2.Metres[:22567]+10 #some extra faff for line opening!
+                #self.raw2.Metres[22567:23048]=self.raw2.Metres[22567:23048]+5
+                #self.raw2.XLevel = self.raw2.XLevel + 1.5
+                
+                self.raw2.Metres[:]=self.raw2.Metres[:]+ Track_Marker_Start_Meters 
+                
+                
+                self.Add_Metres_Interpolated = np.arange(self.raw2.Metres.min(), self.raw2.Metres.max(), 0.9) #200us
+                self.Add_XLevel_Interpolated = np.interp(self.Add_Metres_Interpolated, self.raw2.Metres, self.raw2.XLevel) #700us
+                
+                littleplots[Index.ind].set_data(self.Add_Metres_Interpolated, self.Add_XLevel_Interpolated)
+                
+                fig.canvas.draw_idle()
+                
+                #cycle through ADD plots l2 to l5, doesn't work! because we are inside the class?
+                Index.ind += 1
+                if Index.ind >= len(littleplots) + 1:
+                    Index.ind = littleplots.index(l2)
+                
+                #hard to overwrite any traces, can just adding plots here!
+        def TM(self,event):
+            tk.Tk().withdraw()
+            
+            
+            
+            fig.canvas.draw_idle()   
+                            
+        def save(self,event):
+            tk.Tk().withdraw()
+            # from discrete slider?
+            
+            
+            
+            fig.canvas.draw_idle()
+        
+     
+        
+    callback = Index('add_filename') 
+    try:
+        add_filename
+    except NameError:
+        pass #print('filename undefined')
+    else:    
+        pass
+    
+    #button locations
+    ax_add  = plt.axes([0.715, 0.95, 0.075, 0.04])
+    ax_TM   = plt.axes([0.815, 0.95, 0.075, 0.04])
+    ax_save = plt.axes([0.915, 0.95, 0.075, 0.04])
+    #create buttons
+    b_add  = Button(ax_add, 'Add')
+    b_TM   = Button(ax_TM,  'unused')
+    b_save = Button(ax_save, 'Save')
+    #link them to commands
+    b_add.on_clicked(callback.add)
+    b_TM.on_clicked(callback.TM)
+    b_save.on_clicked(callback.save)
+    
+    # Plot radio buttons, main plot for comparison: top=0.85, left=0.06, right=0.87, bottom=0.1
+    ax_radio = plt.axes([0.915, 0.1, 0.075, 0.75])
+    check = CheckButtons(ax_radio, ('Gauge, mm',' ','XLevel, mm','Trendline','Twist, 3m','XLevel, Sept 2015','XLevel, Add',' ','Rail Lb','Sleepers','Ballast','Curves','Gradient'),\
+    ( True, False, True, True, True, True, True, False, True, True, True, True, True))
+    
+    def clickButtons(label):
+
+        if   label == 'Gauge, mm':      l1Ga.set_visible(not l1Ga.get_visible()), l1Gb.set_visible(not l1Gb.get_visible()), l1Gc.set_visible(not l1Gc.get_visible()), ax3.set_visible(not ax3.get_visible())
+        elif label == 'XLevel, mm':     l1Xa.set_visible(not l1Xa.get_visible()), l1Xb.set_visible(not l1Xb.get_visible()), l1Xc.set_visible(not l1Xc.get_visible())
+        elif label == 'Trendline':      l1M.set_visible(not l1M.get_visible())
+        elif label == 'Twist, 3m':      l1T.set_visible(not l1T.get_visible())
+        elif label=='XLevel, Sept 2015':l0.set_visible(not l0.get_visible())    
+        elif label == 'XLevel, Add':    l2.set_visible(not l2.get_visible())
+        #elif label == '__3__':         l3.set_visible(not l3.get_visible())
+        #elif label == '__4__':         l4.set_visible(not l4.get_visible())
+        #elif label == '__5__':         l5.set_visible(not l5.get_visible()) 
+        elif label == 'Rail Lb':        l1R.set_visible(not l1R.get_visible()), ax8.set_visible(not ax8.get_visible())
+        elif label == 'Sleepers':       l1S.set_visible(not l1S.get_visible()), ax7.set_visible(not ax7.get_visible())
+        elif label == 'Ballast':        l1B.set_visible(not l1B.get_visible()), ax6.set_visible(not ax6.get_visible()) 
+        elif label == 'Curves':         l1C.set_visible(not l1C.get_visible()), ax5.set_visible(not ax5.get_visible())
+        elif label == 'Gradient':       l1in.set_visible(not l1in.get_visible()), ax4.set_visible(not ax4.get_visible())                      
+           
+        #plt.draw()
+        fig.canvas.draw_idle()
+    check.on_clicked(clickButtons)
+    #plt.show()
+    
+    # ExpandMask() Copyright 2007 Regents of the University of California, BSD licence
+    # Adapted from David Isaacson at the University of California
+    def ExpandMask(input, iters):
+      # Expands the True area in a Boolean (masked) array 'input'.
+      # e.g. Join up masked lines, as they are trimmed at the mask boundaries
+      # Expansion occurs in the  vertical direction by one
+      # cell, and is repeated 'iters' times.
+      # Checks if previous cell is True, if so makes the current cell True
+      # Checks if next cell is True, if so makes the current cell True
+      yLen = len(input)
+      output = input.copy()
+      for iter in range(iters): #xrange better than range for looping
+          for y in range(yLen):
+              if (y > 0     and input[y-1]) or \
+              (y < yLen - 1 and input[y+1]): output[y] = True 
+          input = output.copy()
+      return output
+    
+    def ReduceMask(input, iterations):
+      # Reduces the True area in a Boolean (masked) array 'input'.
+      # Reduction occurs in the  vertical direction by one
+      # cell, and is repeated 'iters' times.
+      # Checks if previous cell is False, if so makes the current cell False
+      # Checks if next cell is False, if so makes the current cell False
+      yiLen = len(input)
+      output = input.copy()
+      for iter in range(iterations): #xrange better than range for looping
+          for yi in range(yiLen):
+              if (yi > 0     and input[yi-1]==False) or \
+              (yi < yiLen - 1 and input[yi+1]==False): output[yi] = False 
+          input = output.copy()
+      return output
+      
+  
+    Ballast_Sleepers_Rail_Rack_Curves_Inclines_file = '%s/Data/Ballast_Sleepers_Rail_Rack_Curves_Inclines.csv'%Python_Folder 
+    Track_params = pd.read_csv(Ballast_Sleepers_Rail_Rack_Curves_Inclines_file, usecols = ["Metres","Rail_Lb","Ballast_Size","Sleeper_Type","Gradient_Metres_Start","Elevation","Gradient_1_in","Curve_Metres_X","Curve_Metres_Y"],skip_blank_lines=True)
+
+    ## Gradient
+    if True:
+        [ax4.annotate('%s'%int(Track_params.Gradient_1_in[j]),\
+        xy=((Track_params.Gradient_Metres_Start[j]+Track_params.Gradient_Metres_Start[j+1])/2,\
+        (Track_params.Elevation[j]+Track_params.Elevation[j+1])/2),size=8,color='black') for j in range(25)]
+        l1in.set_data(Track_params.Gradient_Metres_Start, Track_params.Elevation)
+        ax4.set_ylim(-100,15000)
+        ax4.set_yticks([550])
+        ax4.set_yticklabels(["Gradient of 1 in : "],color='black',size=9)
+        plt.sca(ax0) 
+        
+    ## Curves
+    if True:
+        l1C.set_data(Track_params.Curve_Metres_X,Track_params.Curve_Metres_Y)    
+        ax5.set_ylim(-500,3200)
+        ax5.set_yticks([-100,0,100])
+        ax5.set_yticklabels(['-100m Radius Curve','Straight','+5 Chain'],color = 'black',size=9)
+        plt.sca(ax0)
+        
+    ## Ballast
+    if True:
+        ax6.yaxis.set_ticks_position('right')
+        ax6.spines['right'].set_position(('axes',1.0))
+        l1B.set_data(Track_params.Metres, Track_params.Ballast_Size)
+        ax6.set_yticks([1,2])    
+        ax6.set_ylim(-6,29)
+        ax6.set_yticklabels(['20mm Ballast','40/20'],color = 'black')
+        ax6.grid(b = False, which = 'both')
+        
+    ## Sleeper
+    if True:
+        ax7.yaxis.set_ticks_position('right')
+        ax7.spines['right'].set_position(('axes',1.0))
+        l1S.set_data(Track_params.Metres, Track_params.Sleeper_Type)
+        ax7.set_yticks([1,2,3])     
+        ax7.set_ylim(-8,27)
+        ax7.set_yticklabels(['Pressed Sleepers','Square','New'],color = 'black')
+        ax7.grid(b = False, which = 'both')
+            
+   ## Rail
+    if True:
+        ax8.yaxis.set_ticks_position('right')
+        ax8.spines['right'].set_position(('axes',1.0))
+        l1R.set_data(Track_params.Metres, Track_params.Rail_Lb)
+        ax8.set_yticks([40,50])  
+        ax8.set_ylim(-80,250)
+        ax8.set_yticklabels(['40 Lb Rail','50 Lb'],color = 'black')
+        ax8.grid(b = False, which = 'both')
+        
+    ## Welsh & Mile Markers
+    if True:
+        Welsh_Filename = '%s/Data/Welsh_And_Mile_Markers.csv'%Python_Folder #'C:/Users/%s/Documents/Python/Welsh_And_Mile_Markers.csv'%getpass.getuser()
+        Welsh_And_Mile_Markers = pd.read_csv(Welsh_Filename, usecols = ["Labels", "Metres"]) #(1ms)
+        ax2 = ax0.twiny() 
+        ax2.xaxis.set_ticks_position('top')
+        ax2.spines['top'].set_position(('axes',1.0))     
+        ax2.tick_params(which = 'major', axis='x', labelbottom = 'on', colors='black')
+        ax2.set_xticks(Welsh_And_Mile_Markers.Metres)
+        ax2.set_xticklabels(Welsh_And_Mile_Markers.Labels, size = 9, rotation = 90, ha='center',color = 'black')        
+        ax2.set_xlim(ax0.get_xlim())
+        ax2.xaxis.grid(b = True, which = 'major') # welsh
+        
+    ## Track markers    
+    if True:
+        ## Track Marker Locations, in metres
+        # 420 is at 51m, then every 88.602m up to 10 at 7405 #   51+(420-TrackMarker)/10*90=m from summit
+        Track_Marker_Metres = np.linspace(51,7405,83, dtype = int) 
+        ## Track Marker Labels, as seen on track
+        Track_Marker_Labels = np.linspace(420,10,83, dtype = int)
+        ## create a new axis for the track markers
+        ax1 = ax0.twiny()
+        ax1.xaxis.set_ticks_position('bottom')
+        ax1.spines['bottom'].set_position(('axes',-0.05))
+        ax1.tick_params(which = 'major', axis='x', labelbottom = 'on', colors='black')
+        ax1.set_xticks(Track_Marker_Metres)
+        ax1.set_xticklabels(Track_Marker_Labels, size = 8, rotation = 90, ha='center', va='top')
+        ax1.set_xlim(ax0.get_xlim()) # must set limits as per other axis, otherwise will autofit
+        ax1.xaxis.grid(b = True, which = 'major') # track markers
+        ax1.annotate('Track Markers', xy = (1, 0), \
+        xycoords = 'axes fraction',xytext = (5, -45), color = 'black', \
+        textcoords = 'offset points',ha = "left", va = "bottom",fontsize = 10)        
+    
+    ## Metres xaxis setup - this has to be drawn last for the cursor to work!
+    ax = ax0.twiny()
+    ax.xaxis.set_ticks_position('bottom')
+    ax.spines['bottom'].set_position(('axes',0))
+    ax.xaxis.set_label_coords(-0.15,0)
+    ax.tick_params(which = 'major', axis='x', size = 9, labelbottom = 'on')#,colors='k')
+    ax.set_xlim(ax0.get_xlim())
+    ## major gridlines on          
+    ax0.yaxis.grid(b = True, which = 'major', lw = 1) # yaxis base plot
+    ax0.yaxis.grid(b = True, which = 'minor', lw = 0.5)
+    ax.xaxis.grid( b = False, which = 'both') # metres, where XLevel lies 
+    ax.annotate('Metres from summit',xy = (1, 0),\
+    xycoords = 'axes fraction',xytext = (5, -15), color = 'black', \
+    textcoords = 'offset points',ha = "left", va = "bottom",size = 10)
+    ## XLevel yaxis setup
+    ax0.set_ylabel('XLevel, mm. Twist is Blue', size = 12, rotation = 90,color = 'black')
+    plt.ylim(-110, 50) #set master y limits   
+    ## Interpolated array which resamples to 0.9m sleeper base, for display and some calculations. Takes a millisecond, that's okay!
+    Master_Metres_Interpolated = np.arange(raw.Metres.min(), raw.Metres.max(), 0.9) #200us
+    Master_XLevel_Interpolated = np.interp(Master_Metres_Interpolated, raw.Metres, raw.XLevel) #700us
+    Master_Gauge_Interpolated  = np.interp(Master_Metres_Interpolated, raw.Metres, raw.Gauge)
+        
+    maskedlines = True
+    if maskedlines == True:
+        # create masked lines
+        XLevel_maska = np.ma.masked_outside(Master_XLevel_Interpolated,xtol_orange_mm,-xtol_orange_mm)
+        XLevel_maskba= np.ma.masked_outside(np.ma.masked_inside(Master_XLevel_Interpolated,xtol_orange_mm,-xtol_orange_mm),xtol_red_mm,-xtol_red_mm)
+        XLevel_maskb = np.ma.masked_array(np.copy(XLevel_maskba), ReduceMask(XLevel_maskba.mask,1))
+        XLevel_maskc = np.ma.masked_inside(Master_XLevel_Interpolated,xtol_red_mm,-xtol_red_mm)
+        # plot masked lines
+        l1Xa.set_data(Master_Metres_Interpolated, XLevel_maska)
+        l1Xb.set_data(Master_Metres_Interpolated, XLevel_maskb)
+        l1Xc.set_data(Master_Metres_Interpolated, XLevel_maskc)
+    
+    # only plot moving average if it will fit on:
+    MA = True #if input is a numpy array, this will give you one back. pandas allows end options & nan handling.
+    if MA == True:
+        if len(Master_XLevel_Interpolated) > moving_Average_Metres / 0.9:
+            Master_XLevel_av = pd.rolling_mean(Master_XLevel_Interpolated, moving_Average_Metres / 0.9, center = True, min_periods = 1)
+            l1M.set_data(Master_Metres_Interpolated, Master_XLevel_av)
+            
+    # Overlay track twist
+    TwistnShout = True
+    if TwistnShout == True:
+        # calculate the number of entries required to get 3 metres base
+        Twist_Base = int(twist_Base_Metres / 0.125) # measurements every 0.125m 
+        Master_Twist = np.zeros(np.shape(Master_XLevel))
+        for index in range(len(Master_Twist[:-Twist_Base])): # just calculate twist when it is possible to do so
+            Master_Twist[index + Twist_Base] = Master_XLevel[index + Twist_Base]- Master_XLevel[index]
+            #Master_Twist[index] = (Master_XLevel[index + Twist_Base]- Master_XLevel[index]) * 7.2
+        Master_Twist_Masked = np.ma.masked_inside(Master_Twist,twist_tol,-twist_tol)
+        l1T.set_data(raw.Metres, Master_Twist_Masked)
+    
+    if True:
+        ## Gauge - Right Hand y axis
+        ax3.yaxis.set_ticks_position('right')
+        ax3.tick_params(which = 'major', axis='y', size = 8, labelright = 'on')
+        ax3.grid(b = False, which = 'both')
+        Gauge_maska = np.ma.masked_outside(Master_Gauge_Interpolated,Gtol_mid_mm+Gtol_orange_mm,Gtol_mid_mm-Gtol_orange_mm)
+        Gauge_maskba= np.ma.masked_outside(np.ma.masked_inside(Master_Gauge_Interpolated,Gtol_mid_mm+Gtol_orange_mm,Gtol_mid_mm-Gtol_orange_mm),Gtol_mid_mm+Gtol_red_mm,Gtol_mid_mm-Gtol_red_mm)
+        Gauge_maskb = np.ma.masked_array(np.copy(Gauge_maskba), ReduceMask(Gauge_maskba.mask,1))
+        Gauge_maskc = np.ma.masked_inside(Master_Gauge_Interpolated,Gtol_mid_mm+Gtol_red_mm,Gtol_mid_mm-Gtol_red_mm)        
+        l1Ga.set_data(Master_Metres_Interpolated, Gauge_maska)
+        l1Gb.set_data(Master_Metres_Interpolated, Gauge_maskb)
+        l1Gc.set_data(Master_Metres_Interpolated, Gauge_maskc)
+        ax3.set_yticks([795,800,805,810])
+        ax3.set_ylim(710,815)
+        ax3.set_yticklabels([795,'800 mm',805,810],color = 'black')
+        fig.sca(ax0)
+    ax2.xaxis.set_ticks_position('top')
+    
+    ax.format_coord = format_coord
+
+    ## maximise the plot for analysis! 
+    ## http://stackoverflow.com/questions/12439588/how-to-maximize-a-plt-show-window-using-python
+    mng = plt.get_current_fig_manager()
+    mng.window.state('zoomed') #tk
+    
+    ##Put figure window on top of all other windows, only works for tkagg
+    ## http://stackoverflow.com/questions/20025077/how-do-i-display-a-matplotlib-figure-window-on-top-of-all-other-windows-in-spyde
+    fig.canvas.manager.window.attributes('-topmost', 1)
+    ##After placing figure window on top, allow other windows to be on top of it later
+    fig.canvas.manager.window.attributes('-topmost', 0)    
+    
+    
+UseTheblackOldSeptFile = True #September 2015 dotted line
+if UseTheblackOldSeptFile == True:
+    ## This is the dotted 'Sept' trace on l0 ##
+    old_filename = '%s/Data/2015-09-30 End of Season Summit to Llanberis/SMR_Sept15.txt'%Python_Folder 
+    old_raw = pd.read_csv(old_filename, sep = '\t', header = 1)
+    old_raw.columns = ["Metres", "Gauge", "XLevel"]
+    old_raw.Metres[38129:41329]= old_raw.Metres[38129:41329]-5 #for alignment
+    old_raw.Metres[41330:]= old_raw.Metres[41330:]-5 #use -5 to end shuffle the very end right, or -15 for the middle-end!
+    old_Metres_Interpolated = np.arange(old_raw.Metres.min(), old_raw.Metres.max(), 0.9) 
+    old_XLevel_Interpolated = np.interp(old_Metres_Interpolated, old_raw.Metres, old_raw.XLevel)
+    l0.set_data(old_Metres_Interpolated, old_XLevel_Interpolated)
+    fig.canvas.draw_idle()
+    plt.show() # define only once, at the end!
+    
+## Save elapsed time
+elapsed = time.time()-start_time
